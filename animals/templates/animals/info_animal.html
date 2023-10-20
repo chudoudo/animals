@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Info for {{ animal_type }}
+{% endblock %}
+
+{% block content %}
+    {% if description_animal is None %}
+        <h3>Oops! Wrong animal - {{ animal_type }}</h3>
+    {% else %}
+        <h3>{{ description_animal|capfirst|safe }}</h3>
+    {% endif %}
+{% endblock %}
