@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block css_additional %}
+    <link rel="stylesheet" href=" {% static 'animals/css/info_animal.css' %}">
+{% endblock %}
 {% block title %}
     Info for {{ animal_type }}
 {% endblock %}

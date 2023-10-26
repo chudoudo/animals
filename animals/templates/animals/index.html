@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
+{% load static %}
 
+
+
+{% block css_additional %}
+    <link rel="stylesheet" href=" {% static 'animals/css/index.css' %}">
+{% endblock %}
 {% block title %}
     Меню
 {% endblock %}
 
 {% block content %}
-    {% include  %}
     <ul>
         {% for type in types %}
             <li><a href="{% url 'animal-name' animal_type=type %}">{{ type|title }}</a></li>
